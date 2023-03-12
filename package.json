@@ -22,7 +22,7 @@
     "prepublishOnly": "tsdx build"
   },
   "dependencies": {
-    "@astroswap-libs/astroswap-core": "git://github.com/astroswapapp/astroswap-core.git",
+    "@astroswap-libs/astroswap-core": "https://github.com/astroswapapp/astroswap-core.git",
     "big.js": "^5.2.2",
     "decimal.js-light": "^2.5.0",
     "jsbi": "^3.1.1",

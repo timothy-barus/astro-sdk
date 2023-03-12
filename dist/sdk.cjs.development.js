@@ -18,22 +18,6 @@ var providers = require('@ethersproject/providers');
 var IPancakePair = _interopDefault(require('@astroswap-libs/astroswap-core/artifacts/IPancakePair.json'));
 
 var addresses = {
-	"106": {
-	owner: "0x5CC20665b8A8EBBF609eeEA460B3cFb6553c019D",
-	Multicall2: "0xBab799b04D2d1905efFD84b6cF078AcBF68756a1",
-	AstroToken: "0x72eB7CA07399Ec402c5b7aa6A65752B6A1Dc0C27",
-	AdaToken: "0x3611Fbfb06ffBcEf9Afb210f6Ace86742e6c14a4",
-	WVLX: "0xc579d1f3cf86749e05cd06f7ade17856c2ce3126",
-	AstroStake: "0xCAd594BfF4b18bDdea33e3E1E66627AA3001cB72",
-	Timelock: "0xA456F70cfb1F3A7DE58D585F35194fd36f192167",
-	AstroFarm: "0xB98BbAF45bCFbdB37690c7d021437BE15a562209",
-	AstroVault: "0x5AB61B5002b22Ad10F9E989D104EF19C2cB64269",
-	VaultOwner: "0x8a22FCb01AEfD536f68cb1af174CD3B79b184325",
-	AstroStakingFactory: "0x6b563B53cB91A3f3cbC815f8d988dDe1A70126Fc",
-	AstroFactory: "0xe82d721A6CdeC2f86e9Fca074Ff671c8621F8459",
-	PancakeFactory_Init_Code_Hash: "0x38e1c9d60b57ab5f582bd48b6925d622e51ad001b815694010c6e8a4f46adfd0",
-	AstroRouter: "0x3328cd3a9A295cd00fBb1d71Bf097e002B4614ad"
-},
 	"111": {
 	AstroFactory: "0x4746b70d12102E21784c1B48Aa306bd3f06CD3b1",
 	PancakeFactory_Init_Code_Hash: "0x38e1c9d60b57ab5f582bd48b6925d622e51ad001b815694010c6e8a4f46adfd0",
@@ -53,13 +37,31 @@ var addresses = {
 	VaultOwner: "0xaac391718A612248af5e73D41191445A4B1aEF01",
 	AstroStakingFactory: "0xc6D5bc175C4513a1a8bC1Ae69f6943061adF37bF",
 	AstroRouter: "0x677A5d74D9C99EB7C4C09046f29d9A452a3AD184"
+},
+	"1116": {
+	owner: "0x5CC20665b8A8EBBF609eeEA460B3cFb6553c019D",
+	Multicall2: "0xf473fB0C01c251CDb193aEB26D2aaB4faDBB287F",
+	AstroToken: "0x72eB7CA07399Ec402c5b7aa6A65752B6A1Dc0C27",
+	AdaToken: "0x3611Fbfb06ffBcEf9Afb210f6Ace86742e6c14a4",
+	WVLX: "0xc579d1f3cf86749e05cd06f7ade17856c2ce3126",
+	WCORE: "0x8917a8787E715657Ed9E58D8c37e1e3fb70C319C",
+	CORE: "0x40375C92d9FAf44d2f9db9Bd9ba41a3317a2404f",
+	AstroStake: "0xCAd594BfF4b18bDdea33e3E1E66627AA3001cB72",
+	Timelock: "0xA456F70cfb1F3A7DE58D585F35194fd36f192167",
+	AstroFarm: "0xB98BbAF45bCFbdB37690c7d021437BE15a562209",
+	AstroVault: "0x5AB61B5002b22Ad10F9E989D104EF19C2cB64269",
+	VaultOwner: "0x8a22FCb01AEfD536f68cb1af174CD3B79b184325",
+	AstroStakingFactory: "0x6b563B53cB91A3f3cbC815f8d988dDe1A70126Fc",
+	AstroFactory: "0xa21a219a497658ae0C7f8f43F62438fbD75BEC68",
+	PancakeFactory_Init_Code_Hash: "0x38e1c9d60b57ab5f582bd48b6925d622e51ad001b815694010c6e8a4f46adfd0",
+	AstroRouter: "0x9Aa2c32C2DfB5533EEfB99dAb65e812c02cb9243"
 }
 };
 
 var _SOLIDITY_TYPE_MAXIMA;
 
 (function (ChainId) {
-  ChainId[ChainId["MAINNET"] = 106] = "MAINNET";
+  ChainId[ChainId["MAINNET"] = 1116] = "MAINNET";
   ChainId[ChainId["TESTNET"] = 111] = "TESTNET";
 })(exports.ChainId || (exports.ChainId = {}));
 
@@ -476,7 +478,7 @@ function currencyEquals(currencyA, currencyB) {
     return currencyA === currencyB;
   }
 }
-var WETH = (_WETH = {}, _WETH[exports.ChainId.MAINNET] = /*#__PURE__*/new Token(exports.ChainId.MAINNET, addresses[exports.ChainId.MAINNET].WVLX, 18, 'WVLX', 'Wrapped VLX', 'https://www.velas.com/'), _WETH[exports.ChainId.TESTNET] = /*#__PURE__*/new Token(exports.ChainId.TESTNET, addresses[exports.ChainId.TESTNET].WVLX, 18, 'WVLX', 'Wrapped VLX', 'https://www.cardano.org/'), _WETH);
+var WETH = (_WETH = {}, _WETH[exports.ChainId.MAINNET] = /*#__PURE__*/new Token(exports.ChainId.MAINNET, addresses[exports.ChainId.MAINNET].CORE, 18, 'CORE', 'Core Dao', 'https://www.velas.com/'), _WETH[exports.ChainId.TESTNET] = /*#__PURE__*/new Token(exports.ChainId.TESTNET, addresses[exports.ChainId.TESTNET].WVLX, 18, 'WVLX', 'Wrapped VLX', 'https://www.cardano.org/'), _WETH);
 
 var _toSignificantRoundin, _toFixedRounding;
 var Decimal = /*#__PURE__*/toFormat(_Decimal);
@@ -799,7 +801,7 @@ var Pair = /*#__PURE__*/function () {
   function Pair(tokenAmountA, tokenAmountB) {
     var tokenAmounts = tokenAmountA.token.sortsBefore(tokenAmountB.token) // does safety checks
     ? [tokenAmountA, tokenAmountB] : [tokenAmountB, tokenAmountA];
-    this.liquidityToken = new Token(tokenAmounts[0].token.chainId, Pair.getAddress(tokenAmounts[0].token, tokenAmounts[1].token), 18, 'Astro-LP', 'Astro LPs');
+    this.liquidityToken = new Token(tokenAmounts[0].token.chainId, Pair.getAddress(tokenAmounts[0].token, tokenAmounts[1].token), 18, 'Infiny-LP', 'Infiny LPs');
     this.tokenAmounts = tokenAmounts;
   }
 

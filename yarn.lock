@@ -83,9 +83,9 @@
   dependencies:
     tslib "~2.0.1"
 
-"@astroswap-libs/astroswap-core@git://github.com/astroswapapp/astroswap-core.git":
+"@astroswap-libs/astroswap-core@https://github.com/astroswapapp/astroswap-core.git":
   version "0.1.0"
-  resolved "git://github.com/astroswapapp/astroswap-core.git#5118cffbbcba520e2d7736fd21ca15656a90304b"
+  resolved "https://github.com/astroswapapp/astroswap-core.git#f2ebf732b48a66f408070fcf69debd0e71371002"
   dependencies:
     truffle "^5.1.41"
     truffle-flattener "^1.4.4"
