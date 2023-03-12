@@ -411,7 +411,7 @@ function Currency(decimals, symbol, name) {
  * The only instance of the base class `Currency`.
  */
 
-Currency.ETHER = /*#__PURE__*/new Currency(18, 'VLX', 'Velas');
+Currency.ETHER = /*#__PURE__*/new Currency(18, 'CORE', 'Core Dao');
 var ETHER = Currency.ETHER;
 
 var _WETH;
@@ -801,7 +801,7 @@ var Pair = /*#__PURE__*/function () {
   function Pair(tokenAmountA, tokenAmountB) {
     var tokenAmounts = tokenAmountA.token.sortsBefore(tokenAmountB.token) // does safety checks
     ? [tokenAmountA, tokenAmountB] : [tokenAmountB, tokenAmountA];
-    this.liquidityToken = new Token(tokenAmounts[0].token.chainId, Pair.getAddress(tokenAmounts[0].token, tokenAmounts[1].token), 18, 'Infiny-LP', 'Infiny LPs');
+    this.liquidityToken = new Token(tokenAmounts[0].token.chainId, Pair.getAddress(tokenAmounts[0].token, tokenAmounts[1].token), 18, 'Infy-LP', 'Infinite LPs');
     this.tokenAmounts = tokenAmounts;
   }
 
