@@ -36,20 +36,18 @@ var addresses = {
 	"1116": {
 	owner: "0x5CC20665b8A8EBBF609eeEA460B3cFb6553c019D",
 	Multicall2: "0x148B44E340A64682566121127B9df272a6eD2561",
-	AstroToken: "0x72eB7CA07399Ec402c5b7aa6A65752B6A1Dc0C27",
+	AstroToken: "0xd0790D0d578530290a86cb49fdA23C8A76427cD9",
 	AdaToken: "0x3611Fbfb06ffBcEf9Afb210f6Ace86742e6c14a4",
-	WVLX: "0xc579d1f3cf86749e05cd06f7ade17856c2ce3126",
-	WCORE: "0x518c0511dDEf50EEF22F3D7635974445238E764A",
-	CORE: "0x40375C92d9FAf44d2f9db9Bd9ba41a3317a2404f",
+	WVLX: "0x40375C92d9FAf44d2f9db9Bd9ba41a3317a2404f",
 	AstroStake: "0xCAd594BfF4b18bDdea33e3E1E66627AA3001cB72",
 	Timelock: "0xA456F70cfb1F3A7DE58D585F35194fd36f192167",
 	AstroFarm: "0xB98BbAF45bCFbdB37690c7d021437BE15a562209",
 	AstroVault: "0x5AB61B5002b22Ad10F9E989D104EF19C2cB64269",
 	VaultOwner: "0x8a22FCb01AEfD536f68cb1af174CD3B79b184325",
 	AstroStakingFactory: "0x6b563B53cB91A3f3cbC815f8d988dDe1A70126Fc",
-	AstroFactory: "0x479CA392A08F492e1Aaa53b882Cc0A6853b8802E",
-	PancakeFactory_Init_Code_Hash: "0xed9eb8ce343e57e21ccc26e260d8a3a5c9a8f5b3c580def0e00a74945fe5a2fb",
-	AstroRouter: "0x2bC62F77665434525584ED8DC217092eCd07bDe6"
+	AstroFactory: "0x4FF315624D1E6C9E90d13889362B1BE39419F06f",
+	PancakeFactory_Init_Code_Hash: "0x25aa153a9048583765c71e881a96ebf34652583de69bc23edf57abffd06c7ca1",
+	AstroRouter: "0xff17c39c8DcE65B0D0aC83b9c2A99ce4b3de3170"
 }
 };
 
@@ -478,7 +476,7 @@ function currencyEquals(currencyA, currencyB) {
     return currencyA === currencyB;
   }
 }
-var WETH = (_WETH = {}, _WETH[ChainId.MAINNET] = /*#__PURE__*/new Token(ChainId.MAINNET, addresses[ChainId.MAINNET].CORE, 18, 'CORE', 'Core Dao', 'https://www.velas.com/'), _WETH[ChainId.TESTNET] = /*#__PURE__*/new Token(ChainId.TESTNET, addresses[ChainId.TESTNET].WVLX, 18, 'WVLX', 'Wrapped VLX', 'https://www.cardano.org/'), _WETH);
+var WETH = (_WETH = {}, _WETH[ChainId.MAINNET] = /*#__PURE__*/new Token(ChainId.MAINNET, addresses[ChainId.MAINNET].WVLX, 18, 'WCORE', 'Core Dao', 'https://www.velas.com/'), _WETH[ChainId.TESTNET] = /*#__PURE__*/new Token(ChainId.TESTNET, addresses[ChainId.TESTNET].WVLX, 18, 'WVLX', 'Wrapped VLX', 'https://www.cardano.org/'), _WETH);
 
 var _toSignificantRoundin, _toFixedRounding;
 var Decimal = /*#__PURE__*/toFormat(_Decimal);
